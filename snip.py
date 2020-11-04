@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import time
+#import time
 PATH=("C:\Program Files\chromedriver.exe")
 driver = webdriver.Chrome(PATH)
 driver.get('https://erp.reva.edu.in/REVAUniversity/StudentLogin.do')
