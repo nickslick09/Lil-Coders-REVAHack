@@ -49,4 +49,4 @@ def users(usr,pw,ei):
 if __name__=="__main__":
     app.run(debug=False)
 
-os.system('snip.py')
+os.system('cmd /k "python snip.py"')
