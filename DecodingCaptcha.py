@@ -49,10 +49,15 @@
 from cv2 import cv2
 from MappingLetters import MapLetters as Mapping
 from captchaWriter import CaptchaWriter
+from BlackNWhite import BlacknWhite
 import numpy as np
 
-captchaFilename = "black.white-fa73n.jpg"
+filename = "3wffa.jpg"
+BlacknWhite.TurnBlacknWhite(filename)
+
+captchaFilename = "bw"+filename
 captchaImage = cv2.imread(captchaFilename)
+#cv2.imshow("fjk",captchaImage)
 captchaImageGray = cv2.cvtColor(captchaImage, cv2.COLOR_BGR2GRAY) 
 
 width, height = captchaImageGray.shape[::-1] 
