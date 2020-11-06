@@ -20,3 +20,6 @@ pip install Pillow
 ```python
 pip install pytesseract
 ```
+```python
+pip install flask
+```
