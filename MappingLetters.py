@@ -8,7 +8,7 @@ class MapLetters:
         ["MappingLetters\\fat-71.jpg","MappingLetters\\fat-72.jpg"],#"MappingLetters\\fat-73.jpg"],
         ["MappingLetters\\fat-81.jpg","MappingLetters\\fat-82.jpg"],
         ["MappingLetters\\fat-a1.jpg","MappingLetters\\fat-a2.jpg"],
-        ["MappingLetters\\fat-b1.jpg","MappingLetters\\fat-b2.jpg","MappingLetters\\fat-b3.jpg","MappingLetters\\fat-b4.jpg"],
+        ["MappingLetters\\fat-b1.jpg","MappingLetters\\fat-b2.jpg","MappingLetters\\fat-b3.jpg"],#"MappingLetters\\fat-b4.jpg"],
         ["MappingLetters\\fat-c1.jpg","MappingLetters\\fat-c2.jpg"],
         ["MappingLetters\\fat-d1.jpg","MappingLetters\\fat-d2.jpg"],
         ["MappingLetters\\fat-e1.jpg","MappingLetters\\fat-e2.jpg","MappingLetters\\fat-e3.jpg"],
@@ -19,8 +19,8 @@ class MapLetters:
         ["MappingLetters\\fat-m1.jpg","MappingLetters\\fat-m2.jpg","MappingLetters\\fat-m3.jpg","MappingLetters\\fat-m4.jpg"],
         ["MappingLetters\\fat-n1.jpg","MappingLetters\\fat-n2.jpg","MappingLetters\\fat-n3.jpg"],
         ["MappingLetters\\fat-p1.jpg","MappingLetters\\fat-p2.jpg"],
-        ["MappingLetters\\fat-r1.jpg","MappingLetters\\fat-r2.jpg"],
+        ["MappingLetters\\fat-r1.jpg","MappingLetters\\fat-r2.jpg","MappingLetters\\fat-r3.jpg"],
         ["MappingLetters\\fat-w1.jpg","MappingLetters\\fat-w2.jpg","MappingLetters\\fat-w3.jpg","MappingLetters\\fat-w4.jpg","MappingLetters\\fat-w5.jpg"],
-        ["MappingLetters\\fat-x1.jpg","MappingLetters\\fat-x2.jpg"],
+        ["MappingLetters\\fat-x1.jpg","MappingLetters\\fat-x2.jpg","MappingLetters\\fat-x3.jpg"],
         ["MappingLetters\\fat-y1.jpg","MappingLetters\\fat-y2.jpg"]
     ]
