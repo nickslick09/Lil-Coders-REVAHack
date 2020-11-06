@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>
+Pingttendance
+</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/Design.css') }}">
+</head>
+<body>
+<div class="NavBar">
+	<div class="NavTitle">
+		<p class="NavHead">Pingttendance</p>
+	</div>
+</div>
+<div id="Box">
+	<form method="post" action="#">
+		<p id="signin">
+		<b>Enter the Details</b><br></p>
+		<p id="box1text">
+		Username    <input type="text" name="userid"/><br><br>
+        Password    <input type="password" name="pswrd"/><br><br>
+		Email ID    <input type="text" name="email"/><br><br>
+		<input type="submit" onclick="check(this.form)" value="Submit"/>
+		<input type="reset" value="Reset"/>
+		</p>
+	</form>
+</div>
+<script language="javascript">
+function check(form)
+{
+ if(form.userid.value == "" || form.pswrd.value == "" || form.pswrd.email=="")
+  {
+    alert("Username, Password and Email ID cannot be empty")
+  }
+ else{
+	alert("Details successfully stored");
+  }
+
+}
+</script>
+</body>
+</html>
