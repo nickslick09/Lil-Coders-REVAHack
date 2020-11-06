@@ -1,7 +1,7 @@
 #Import the necesseray Packages
 from cv2 import cv2
 
-filename = "Captcha (1).png"
+filename = "2.jpg"
 originalImage = cv2.imread(filename)
 cv2.imshow('234',originalImage)
 duplicateImage = cv2.imread(filename)
@@ -18,23 +18,11 @@ atmc = cv2.adaptiveThreshold(grayImage, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THR
 
 #Display All the Image Varients
 
-cv2.imshow('Original image',originalImage)
-cv2.imshow('Black white image', blackAndWhiteImage)
-cv2.imshow('Gray image', grayImage)
+# cv2.imshow('Original image',originalImage)
+# cv2.imshow('Black white image', blackAndWhiteImage)
+# cv2.imshow('Gray image', grayImage)
 cv2.imshow('Adaptive Black n White', atmc)
-cv2.imwrite('black.white-'+filename,atmc)
-# print(originalImage.shape)
-# print(grayImage.shape)
-# # if originalImage.shape == grayImage.shape:
-# print("Same size and channel")
-# difference = cv2.subtract(originalImage,grayImage)
-# cv2.imshow("difference", difference)
-# b, g, r = cv2.split(difference)
+cv2.imwrite('bw'+filename,atmc)
 
-# cv2.imshow('difference',difference)
-# if cv2.countNonZero(b)==0 and cv2.countNonZero(g)==0 and cv2.countNonZero(r)==0:
-#     print("The images are same")  
-# else:
-#     print("not same size")
 cv2.waitKey(0)
 cv2.destroyAllWindows()
