@@ -1,0 +1,85 @@
+ body { background-color:#E7FFFE ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+	background-size: cover;
+	overflow-y:scroll;
+}
+	   
+.NavBar {
+	font-family:Georgia;
+	margin-top:-8px;
+	margin-left: -8px;
+	width:101.2%;
+	background-color:#23F9C5 ;
+	height:75px;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	transition: all 1s ease;
+	-webkit-box-shadow: 2px 10px 23px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 2px 10px 23px 0px rgba(0,0,0,0.5);
+	box-shadow: 2px 10px 23px 0px rgba(0,0,0,0.5);}
+.NavTitle {
+	position:absolute;
+	margin-left:140px;
+	margin-top:0;
+	width:75%;
+	height:70px;
+	float:left;
+	z-index:4;}
+.NavHead {
+	margin-left:40%;
+	font-size: 50px;
+	position:absolute;
+	margin-top: 7px;
+	letter-spacing:1.5px;
+	color:black;
+}
+.Box1{
+	margin-top:7px;
+	margin-left:10px;
+	position:fixed;
+	width:50%;
+	margin-right:50%;
+}
+.Box2{
+	font-family:Candara;
+	font-size:20px;
+	position:fixed;
+	width:50%;
+	margin-left:50%;
+	margin-top:0px;
+}
+#Box{width:90%;
+      height:75%;
+	  margin-top:5%;
+	  margin-bottom:10px;
+	  margin-left:25px;
+	  margin-right:auto;
+      border:none;
+	  font-family:Candara;
+	  position:fixed;
+	-webkit-box-shadow: 2px 10px 23px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 2px 10px 23px 0px rgba(0,0,0,0.5);
+	box-shadow: 2px 10px 23px 0px rgba(0,0,0,0.5);
+	background:#FFFFFF;
+}	
+#signin{
+	font-family:Candara;
+	font-size:25px;
+	MARGIN-TOP:10px;
+	MARGIN-LEFT:20px;
+}
+#box1text{font-family:Candara;
+	
+	font-size:20px;
+    MARGIN-LEFT:18PX;
+    MARGIN-TOP:8PX;
+	margin-right:100px;
+}
+#Proceed{
+	font-family:Candara;
+	MARGIN-LEFT:18PX;
+	font-size:20px;
+}
