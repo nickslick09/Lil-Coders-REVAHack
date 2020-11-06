@@ -6,7 +6,7 @@ class BlacknWhite:
     def TurnBlacknWhite(filename):
         #filename = "bf478.jpg"
         originalImage = cv2.imread(filename)
-        cv2.imshow('234',originalImage)
+        # cv2.imshow('234',originalImage)
         # duplicateImage = cv2.imread(filename)
         grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
 
@@ -24,9 +24,9 @@ class BlacknWhite:
         # cv2.imshow('Original image',originalImage)
         # cv2.imshow('Black white image', blackAndWhiteImage)
         # cv2.imshow('Gray image', grayImage)
-        cv2.imshow('atmc', atmc)
+        # cv2.imshow('atmc', atmc)
         newfilename = filename[:-4]+"_bw"+filename[-4:]
         cv2.imwrite(newfilename,atmc)
 
-        cv2.waitKey(0)
+       # cv2.waitKey(0)
         cv2.destroyAllWindows()
