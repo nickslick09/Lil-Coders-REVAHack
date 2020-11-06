@@ -21,10 +21,10 @@ class CaptchaWriter:
         if len(location[1])==0:
             return -1
         for point in zip(*location[::-1]):
-            cv2.rectangle(sourceImage,point,(point[0]+w,point[1]+h), (0,0,255),1)
-            cv2.imshow('sjo',sourceImage)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
+            # cv2.rectangle(sourceImage,point,(point[0]+w,point[1]+h), (0,0,255),1)
+            # cv2.imshow('sjo',sourceImage)
+            # cv2.waitKey(0)
+            # cv2.destroyAllWindows()
             return point[0]+w
         return 0
 
@@ -46,16 +46,16 @@ class CaptchaWriter:
                     #print(val,fnameIndex)
                     if val > 0:
                         #print(val)
-                        print(val,fnameIndex)
+                        # print(val,fnameIndex)
                         captchaCropped = captchaCropped[0:height1,val:width1]
                         #cv2.imshow("img1",img1)
                         if fnameIndex[-6] == 'm' or fnameIndex[-6]=='w':
                             letter = captchaCropped[0:height1,0:52]
                         else:
                             letter = captchaCropped[0:height1,0:45]
-                        cv2.imshow("im",letter)
-                        cv2.waitKey(0)
-                        cv2.destroyAllWindows()
+                        # cv2.imshow("im",letter)
+                        # cv2.waitKey(0)
+                        # cv2.destroyAllWindows()
                         #print(val)
                         #print(fname[0][-6])
                         captcha += fnameIndex[-6]
