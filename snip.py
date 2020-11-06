@@ -2,6 +2,11 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from DecodingCaptcha import Decode
 import time
+from cv2 import cv2
+from MappingLetters import MapLetters as Mapping
+from captchaWriter import CaptchaWriter
+from BlackNWhite import BlacknWhite
+import numpy as np
 PATH=("C:\Program Files\chromedriver.exe")
 driver = webdriver.Chrome(PATH)
 file_object = open('currentuserdetails.txt', 'r')
