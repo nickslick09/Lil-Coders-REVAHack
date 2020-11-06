@@ -52,10 +52,10 @@ from captchaWriter import CaptchaWriter
 from BlackNWhite import BlacknWhite
 import numpy as np
 
-filename = "3wffa.jpg"
+filename = "MappingLetters\\Thin\\y1.png"
 BlacknWhite.TurnBlacknWhite(filename)
 
-captchaFilename = "bw"+filename
+captchaFilename = filename[:-4]+"_bw"+filename[-4:]
 captchaImage = cv2.imread(captchaFilename)
 #cv2.imshow("fjk",captchaImage)
 captchaImageGray = cv2.cvtColor(captchaImage, cv2.COLOR_BGR2GRAY) 

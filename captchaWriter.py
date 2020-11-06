@@ -15,7 +15,7 @@ class CaptchaWriter:
         w, h = template.shape[::-1]
 
         res = cv2.matchTemplate(sourceImage, template, cv2.TM_CCOEFF_NORMED)
-        threshold = 0.8
+        threshold = 0.825
         #print(res)
         location = np.where(res >= threshold)
         if len(location[1])==0:
@@ -33,36 +33,103 @@ class CaptchaWriter:
     def captchaResult(captchaCropped, letter):
         captcha = ""
         i=0
-        while i<5:
-            #print(i)
-            for fname in Mapping.Map:
-                width1, height1 = captchaCropped.shape[::-1] 
-                #cv2.imshow("im",im)
-                # cv2.waitKey(0)
-                # cv2.destroyAllWindows()
-                flag = False
-                for fnameIndex in fname:
-                    val = CaptchaWriter.findMatch(fnameIndex,letter)
-                    #print(val,fnameIndex)
-                    if val > 0:
-                        #print(val)
-                        # print(val,fnameIndex)
-                        captchaCropped = captchaCropped[0:height1,val:width1]
-                        #cv2.imshow("img1",img1)
-                        if fnameIndex[-6] == 'm' or fnameIndex[-6]=='w':
-                            letter = captchaCropped[0:height1,0:52]
-                        else:
-                            letter = captchaCropped[0:height1,0:45]
-                        # cv2.imshow("im",letter)
-                        # cv2.waitKey(0)
-                        # cv2.destroyAllWindows()
-                        #print(val)
-                        #print(fname[0][-6])
-                        captcha += fnameIndex[-6]
-                        print(captcha)
-                        flag = True
-                        break
-                if flag==True:
+        ThinorThick = False
+        for fname in Mapping.ThickMap:
+            width1, height1 = captchaCropped.shape[::-1] 
+            # cv2.imshow("im",im)
+            # cv2.waitKey(0)
+            # cv2.destroyAllWindows()
+            flag = False
+            for fnameIndex in fname:
+                val = CaptchaWriter.findMatch(fnameIndex,letter)
+                if val > 0:
+                    # print(val,fnameIndex)
+                    # cv2.imshow("im",letter)
+                    # cv2.waitKey(0)
+                    # cv2.destroyAllWindows()
+                    #print(val)
+                    #print(fname[0][-6])
+                    ThinorThick = True
+                    flag = True
                     break
-            i+=1
-        return captcha
+            if flag==True:
+                break
+
+        #print(ThinorThick)
+        if ThinorThick == False:
+            print("thin")
+            while i<5:
+                #print(i)
+                for fname in Mapping.ThinMap:
+                    width1, height1 = captchaCropped.shape[::-1] 
+                    # cv2.imshow("im",im)
+                    # cv2.waitKey(0)
+                    # cv2.destroyAllWindows()
+                    flag = False
+                    for fnameIndex in fname:
+                        val = CaptchaWriter.findMatch(fnameIndex,letter)
+                        #print(val,fnameIndex)
+                        if val > 0:
+                            #print(val)
+                            #print(val,fnameIndex)
+                            captchaCropped = captchaCropped[0:height1,val:width1]
+                            # cv2.imshow("im",captchaCropped)
+                            # cv2.waitKey(0)
+                            # cv2.destroyAllWindows()
+                            if fnameIndex[-6] == 'm' or fnameIndex[-6]=='w':
+                                letter = captchaCropped[0:height1,0:52]
+                            elif fnameIndex[-6:-4]=="p1":
+                                letter = captchaCropped[0:height1,15:60]
+                            else:
+                                letter = captchaCropped[0:height1,0:45]
+                            # cv2.imshow("im",letter)
+                            # cv2.waitKey(0)
+                            # cv2.destroyAllWindows()
+                            #print(val)
+                            #print(fname[0][-6])
+                            captcha += fnameIndex[-6]
+                            print(captcha)
+                            flag = True
+                            break
+                    if flag==True:
+                        break
+                i+=1
+            return captcha
+        else:
+            while i<5:
+                #print(i)
+                for fname in Mapping.ThickMap:
+                    width1, height1 = captchaCropped.shape[::-1] 
+                    # cv2.imshow("im",im)
+                    # cv2.waitKey(0)
+                    # cv2.destroyAllWindows()
+                    flag = False
+                    for fnameIndex in fname:
+                        val = CaptchaWriter.findMatch(fnameIndex,letter)
+                        #print(val,fnameIndex)
+                        if val > 0:
+                            #print(val)
+                            # print(val,fnameIndex)
+                            captchaCropped = captchaCropped[0:height1,val:width1]
+                            #cv2.imshow("img1",img1)
+                            if fnameIndex[-6] == 'm' or fnameIndex[-6]=='w':
+                                letter = captchaCropped[0:height1,0:52]
+                            else:
+                                letter = captchaCropped[0:height1,0:45]
+                            # cv2.imshow("im",letter)
+                            # cv2.waitKey(0)
+                            # cv2.destroyAllWindows()
+                            #print(val)
+                            #print(fname[0][-6])
+                            captcha += fnameIndex[-6]
+                            print(captcha)
+                            flag = True
+                            break
+                    if flag==True:
+                        break
+                i+=1
+            return captcha
+
+
+
+        
