@@ -4,7 +4,7 @@ class MapLetters:
         ["MappingLetters\\fat-31.jpg","MappingLetters\\fat-32.jpg","MappingLetters\\fat-33.jpg"],
         ["MappingLetters\\fat-41.jpg","MappingLetters\\fat-42.jpg"],#"MappingLetters\\fat-43.jpg"],
         ["MappingLetters\\fat-51.jpg","MappingLetters\\fat-52.jpg","MappingLetters\\fat-53.jpg"],
-        ["MappingLetters\\fat-61.jpg","MappingLetters\\fat-62.jpg","MappingLetters\\fat-63.jpg","MappingLetters\\fat-64.jpg"],
+        ["MappingLetters\\fat-61.jpg","MappingLetters\\fat-62.jpg","MappingLetters\\fat-63.jpg"],#"MappingLetters\\fat-64.jpg"],
         ["MappingLetters\\fat-71.jpg","MappingLetters\\fat-72.jpg"],#"MappingLetters\\fat-73.jpg"],
         ["MappingLetters\\fat-81.jpg","MappingLetters\\fat-82.jpg"],
         ["MappingLetters\\fat-a1.jpg","MappingLetters\\fat-a2.jpg"],
