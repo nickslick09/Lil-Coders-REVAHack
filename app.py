@@ -3,15 +3,15 @@ from flask import render_template
 from flask import request,redirect,url_for,Response
 import os 
 app=Flask(__name__)
-@app.route('/',methods=["POST", "GET"])
+@app.route('/',methods=["POST","GET"])
 def home():
     if request.method=="POST":
-        user=request.form["userid"]
-        password=request.form["pswrd"]
+        user=request.form["srn"]
+        password=request.form["pass"]
         emailid=request.form["email"]
         return redirect(url_for("users",usr=user,pw=password,ei=emailid))
     else:
-        return render_template("index.html")
+        return render_template("Register.html")
 
 def shutdown_server():
     func = request.environ.get('werkzeug.server.shutdown')
@@ -24,7 +24,7 @@ def shutdown_server():
 #    shutdown_server()
 #    return 'Thank you for entering your response'
 
-@app.route('/<usr>/<pw>/<ei>', methods=['GET','POST'])
+@app.route('/<usr>/<pw>/<ei>', methods=['GET'])
 def users(usr,pw,ei):
     file_object = open('currentuserdetails.txt', 'a')
     file_object2 = open('userdetailscomplete.txt', 'a')
@@ -44,7 +44,7 @@ def users(usr,pw,ei):
     file_object.close()
     file_object2.close()
     shutdown_server()
-    return render_template("endpage.html")
+    return render_template("ThankYou.html")
 
 if __name__=="__main__":
     app.run(debug=False)
