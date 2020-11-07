@@ -43,7 +43,9 @@ cap.clear()
 cap.send_keys(decodedCaptcha)
 
 driver.find_element_by_id("Login").click()
-
+for elem in driver.find_elements_by_xpath('.//span[@class = "name"]'):
+    print (elem.text)
+name=elem.text
 driver.get('https://erp.reva.edu.in/REVAUniversity/studentWiseAttendanceSummary.do?method=getIndividualStudentWiseSubjectAndActivityAttendanceSummary')
 driver.execute_script("document.body.style.zoom='77%'")
 driver.get_screenshot_as_file("Screenshot.jpg")
@@ -58,7 +60,7 @@ crop.save('Attendance.png')
 EMAIL_ADDRESS='pingttendance@gmail.com'
 EMAIL_PASSWORD='pingttendance@333'
 msg = EmailMessage()
-msg['Subject'] = 'Welcome to Pingttendance, here is your Attendance!'
+msg['Subject'] = 'Welcome '+ name+ ' to Pingttendance, here is your Attendance!'
 msg['From'] = EMAIL_ADDRESS
 msg['To'] = x[2]
 
