@@ -3,7 +3,7 @@
 ### Download Chrome Driver
 https://chromedriver.storage.googleapis.com/index.html?path=86.0.4240.22/
 
-### Python packages used so far
+### Python packages used
 
 ### OpenCV
 ```python
