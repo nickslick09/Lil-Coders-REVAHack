@@ -24,9 +24,10 @@ pip install Pillow
 pip install flask
 ```
 ### Steps to run the Project
-1. Download Chrome Driver and the required python packages mentioned in the readme file
-2. Run app.py program and go to any browser and open localhost:5000 to see the working of the project
-3. Once run successfully you will get an email which will give you your attendance details
+1. Clone the repository into your system 
+2. Download Chrome Driver and the required python packages mentioned in the readme file
+3. Run app.py program and go to any browser and open localhost:5000 to see the working of the project
+4. Once run successfully you will get an email which will give you your attendance details
 
 
 
