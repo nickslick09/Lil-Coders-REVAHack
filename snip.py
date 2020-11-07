@@ -60,7 +60,7 @@ crop.save('Attendance.png')
 EMAIL_ADDRESS='pingttendance@gmail.com'
 EMAIL_PASSWORD='pingttendance@333'
 msg = EmailMessage()
-msg['Subject'] = 'Welcome '+ name+ ' to Pingttendance, here is your Attendance!'
+msg['Subject'] = ''+ name+ ', Welcome to Pingttendance, here is your Attendance!'
 msg['From'] = EMAIL_ADDRESS
 msg['To'] = x[2]
 
