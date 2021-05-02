@@ -57,8 +57,8 @@ crop=img_crop.convert('RGB')
 crop.save('Attendance.png')
 #driver.quit() #for closing the browser
 
-EMAIL_ADDRESS='pingttendance@gmail.com'
-EMAIL_PASSWORD='pingttendance@333'
+EMAIL_ADDRESS=''
+EMAIL_PASSWORD=''
 msg = EmailMessage()
 msg['Subject'] = ''+ name+ ', Welcome to Pingttendance, here is your Attendance!'
 msg['From'] = EMAIL_ADDRESS
