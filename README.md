@@ -1,4 +1,4 @@
-# Lil-Coders-REVAHack
+# Lil Coders REVA Hack
 
 ### Download Chrome Driver
 https://chromedriver.storage.googleapis.com/index.html?path=86.0.4240.22/
